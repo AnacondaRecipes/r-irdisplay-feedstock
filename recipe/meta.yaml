@@ -14,16 +14,10 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/IRdisplay/IRdisplay_{{ version }}.tar.gz
   sha256: e83a0bc52800618bf9a3ac5ef3d432512e00f392b7216fd515fca319377584a6
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
