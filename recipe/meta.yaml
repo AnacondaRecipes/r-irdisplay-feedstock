@@ -1,4 +1,4 @@
-{% set version = '0.5.0' %}
+{% set version = '0.7.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,12 +11,13 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/IRdisplay_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/IRdisplay/IRdisplay_{{ version }}.tar.gz
-  sha256: 3db5428e50c9ee6bbf4a4da34571793955fdd9fad4e08f3ac36d86dbd26590cb
+  sha256: 91eac9acdb92ed0fdc58e5da284aa4bb957ada5eef504fd89bec136747999089
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
+  noarch: generic
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -67,21 +68,21 @@ extra:
 # Package: IRdisplay
 # Title: 'Jupyter' Display Machinery
 # Description:  An interface to the rich display capabilities of 'Jupyter' front-ends (e.g. 'Jupyter Notebook') <https://jupyter.org>. Designed to be used from a running 'IRkernel' session <https://irkernel.github.io>.
-# Version: 0.5.0
-# Authors@R: c( person('Thomas', 'Kluyver', role = c('aut', 'cph'), email = 'thomas@kluyver.me.uk'), person('Philipp', 'Angerer', role = c('aut', 'cph', 'cre'), email = 'phil.angerer@gmail.com'), person('Jan', 'Schulz', role = c('aut', 'cph'), email = 'jasc@gmx.net'))
+# Version: 0.7.0
+# Authors@R: c( person('Thomas', 'Kluyver', role = c('aut', 'cph'), email = 'thomas@kluyver.me.uk'), person('Philipp', 'Angerer', role = c('aut', 'cph', 'cre'), email = 'phil.angerer@gmail.com', comment = c(ORCID = "0000-0002-0369-2888")), person('Jan', 'Schulz', role = c('aut', 'cph'), email = 'jasc@gmx.net'))
 # Depends: R (>= 3.0.1)
 # Suggests: testthat, withr
 # Imports: methods, repr
 # License: MIT + file LICENSE
 # LazyData: true
 # Encoding: UTF-8
-# RoxygenNote: 6.0.1.9000
+# RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2018-05-17 11:38:24 UTC; angerer
-# Author: Thomas Kluyver [aut, cph], Philipp Angerer [aut, cph, cre], Jan Schulz [aut, cph]
+# Packaged: 2018-11-29 09:34:55 UTC; angerer
+# Author: Thomas Kluyver [aut, cph], Philipp Angerer [aut, cph, cre] (<https://orcid.org/0000-0002-0369-2888>), Jan Schulz [aut, cph]
 # Maintainer: Philipp Angerer <phil.angerer@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2018-05-17 14:50:49 UTC
+# Date/Publication: 2018-11-29 12:20:10 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
